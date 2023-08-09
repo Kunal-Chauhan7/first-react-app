@@ -11,7 +11,11 @@ import {useState} from 'react';// importing the useState Hook
 
 const FunctionalComponent = (props)=>{ //accesing Props using props
     // Here all the javaScript logic will be written before the return statement
-
+    // we can destruture props and use them like variables
+    //
+    // const {name , age , ChangeName } = prpos;
+    //
+    //
     const [count,setCount] = useState(0);
     const [changedname , Changename] = useState("");
 
