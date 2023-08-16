@@ -1,5 +1,4 @@
-import React from 'react'; 
-import {useState} from 'react';// importing the useState Hook
+import {useState , useEffect} from 'react';// importing the useState Hook
 
 //function FunctionalComponent (){
 //    return(
@@ -17,7 +16,25 @@ const FunctionalComponent = (props)=>{ //accesing Props using props
     //
     //
     const [count,setCount] = useState(0);
-    const [changedname , Changename] = useState("");
+    const [ changedname , Changename] = useState("");
+
+    useEffect(()=>{
+        console.log("Component did Update")
+    }); // for all components chaage
+
+    useEffect(()=>{
+        console.log("Component did Mount")
+    },[]);
+
+    useEffect(()=>{
+        return console.log("component did unmount");
+    },[]);
+
+
+    useEffect(()=>{
+        console.log("Change name component did Change")
+    },[changedname]); // only will work when name variable is changed
+
 
     return(
         <div>
